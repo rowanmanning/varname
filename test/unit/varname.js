@@ -47,12 +47,13 @@
                     'foo12Bar34Baz56':   'foo12,bar34,baz56',
                     'Foo12Bar34Baz56':   'foo12,bar34,baz56',
 
+                    'FOOBARBAZ':       'foobarbaz',
                     '/foo/bar/baz!':   'foo,bar,baz',
                     'FOO BAR BAZ':     'foo,bar,baz',
-                    'FOOBARBAZ':       'foobarbaz',
                     'foo_-_bar_-_baz': 'foo,bar,baz',
-                    'foo__bar--baz': 'foo,bar,baz',
-                    'foo.bar.baz':     'foo,bar,baz'
+                    'foo__bar--baz':   'foo,bar,baz',
+                    'foo.bar.baz':     'foo,bar,baz',
+                    '♥/foo|bar|baz/♥': 'foo,bar,baz'
 
                 };
                 for (test in tests) {
