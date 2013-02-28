@@ -28,20 +28,32 @@
 
             it('should split strings correctly', function () {
                 var test, tests = {
-                    'foobar': 'foobar',
+
+                    'foobar':   'foobar',
                     ' foobar ': 'foobar',
+
                     'foo-bar': 'foo,bar',
                     'foo_bar': 'foo,bar',
-                    'fooBar': 'foo,bar',
-                    'FooBar': 'foo,bar',
+                    'fooBar':  'foo,bar',
+                    'FooBar':  'foo,bar',
+
                     'foo-bar-baz': 'foo,bar,baz',
                     'foo_bar_baz': 'foo,bar,baz',
-                    'fooBarBaz': 'foo,bar,baz',
-                    'FooBarBaz': 'foo,bar,baz',
+                    'fooBarBaz':   'foo,bar,baz',
+                    'FooBarBaz':   'foo,bar,baz',
+
                     'foo12-bar34-baz56': 'foo12,bar34,baz56',
                     'foo12_bar34_baz56': 'foo12,bar34,baz56',
-                    'foo12Bar34Baz56': 'foo12,bar34,baz56',
-                    'Foo12Bar34Baz56': 'foo12,bar34,baz56'
+                    'foo12Bar34Baz56':   'foo12,bar34,baz56',
+                    'Foo12Bar34Baz56':   'foo12,bar34,baz56',
+
+                    '/foo/bar/baz!':   'foo,bar,baz',
+                    'FOO BAR BAZ':     'foo,bar,baz',
+                    'FOOBARBAZ':       'foobarbaz',
+                    'foo_-_bar_-_baz': 'foo,bar,baz',
+                    'foo__bar--baz': 'foo,bar,baz',
+                    'foo.bar.baz':     'foo,bar,baz'
+
                 };
                 for (test in tests) {
                     if (tests.hasOwnProperty(test)) {
