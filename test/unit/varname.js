@@ -64,40 +64,6 @@
 
         });
 
-        describe('underscore', function () {
-
-            it('should be a function', function () {
-                assert.strictEqual(typeof varname.underscore, 'function');
-            });
-
-            it('should return a string', function () {
-                assert.strictEqual(typeof varname.underscore('foo'), 'string');
-            });
-
-            it('should join string parts with underscores', function () {
-                assert.strictEqual(varname.underscore('foo'), 'foo');
-                assert.strictEqual(varname.underscore('foo bar baz'), 'foo_bar_baz');
-            });
-
-        });
-
-        describe('dash', function () {
-
-            it('should be a function', function () {
-                assert.strictEqual(typeof varname.dash, 'function');
-            });
-
-            it('should return a string', function () {
-                assert.strictEqual(typeof varname.dash('foo'), 'string');
-            });
-
-            it('should join string parts with dashes', function () {
-                assert.strictEqual(varname.dash('foo'), 'foo');
-                assert.strictEqual(varname.dash('foo bar baz'), 'foo-bar-baz');
-            });
-
-        });
-
         describe('camelback', function () {
 
             it('should be a function', function () {
@@ -128,6 +94,40 @@
             it('should join string parts and uppercase all first letters', function () {
                 assert.strictEqual(varname.camelcase('foo'), 'Foo');
                 assert.strictEqual(varname.camelcase('foo bar baz'), 'FooBarBaz');
+            });
+
+        });
+
+        describe('dash', function () {
+
+            it('should be a function', function () {
+                assert.strictEqual(typeof varname.dash, 'function');
+            });
+
+            it('should return a string', function () {
+                assert.strictEqual(typeof varname.dash('foo'), 'string');
+            });
+
+            it('should join string parts with dashes', function () {
+                assert.strictEqual(varname.dash('foo'), 'foo');
+                assert.strictEqual(varname.dash('foo bar baz'), 'foo-bar-baz');
+            });
+
+        });
+
+        describe('underscore', function () {
+
+            it('should be a function', function () {
+                assert.strictEqual(typeof varname.underscore, 'function');
+            });
+
+            it('should return a string', function () {
+                assert.strictEqual(typeof varname.underscore('foo'), 'string');
+            });
+
+            it('should join string parts with underscores', function () {
+                assert.strictEqual(varname.underscore('foo'), 'foo');
+                assert.strictEqual(varname.underscore('foo bar baz'), 'foo_bar_baz');
             });
 
         });
