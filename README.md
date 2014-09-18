@@ -92,6 +92,7 @@ Split a string into separate variable parts. This allows you to write your own f
 ```js
 varname.split('fooBarBaz');
 varname.split('FooBarBaz');
+varname.split('FOOBarBAZ');
 varname.split('foo-bar-baz');
 varname.split('foo_bar_baz');
 varname.split('♥~foo|bar|baz~♥');

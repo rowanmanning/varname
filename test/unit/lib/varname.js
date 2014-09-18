@@ -162,6 +162,7 @@ describe('lib/varname', function () {
             assert.deepEqual(varname.split('foo__bar--baz'), expected);
             assert.deepEqual(varname.split('foo.bar.baz'), expected);
             assert.deepEqual(varname.split('♥/foo|bar|baz/♥'), expected);
+            assert.deepEqual(varname.split('FOOBarBAZ'), expected);
         });
 
         it('should split names containing numbers correctly', function () {
