@@ -18,11 +18,13 @@
         "node": ">=0.6"
     },
     "devDependencies": {
+        "browserify": "^11",
         "istanbul": "~0.3",
         "jscs": "^2",
         "jshint": "^2",
         "mocha": "^2",
-        "proclaim": "^3"
+        "proclaim": "^3",
+        "uglify-js": "^2"
     },
 
     "main": "./lib/varname.js",

@@ -8,7 +8,6 @@ Convert strings between different variable naming formats.
 [![Node.js version support][shield-node]][info-node]
 [![Build status][shield-build]][info-build]
 [![Code coverage][shield-coverage]][info-coverage]
-[![Dependencies][shield-dependencies]][info-dependencies]
 [![MIT licensed][shield-license]][info-license]
 
 **Browser Support:** *Android Browser 2.2–4.2, Firefox 3.6, Firefox 4–17, Google Chrome 14–25, Internet Explorer 6–10, Mobile Safari iOS 3–6, Opera 12.10, Safari 5–6*
@@ -29,10 +28,10 @@ On the client side, you can either install Varname through [Component][component
 component install rowanmanning/varname
 ```
 
-or by simply including `varname.js` in your page:
+or by including the built version of Varname in your page (found in [build/varname.js](build/varname.js):
 
 ```html
-<script src="path/to/lib/varname.js"></script>
+<script src="varname.js"></script>
 ```
 
 
@@ -45,59 +44,57 @@ In Node.js or using Component, you can include Varname in your script by using r
 var varname = require('varname');
 ```
 
-Varname also works with AMD-style module loaders, just specify it as a dependency.
-
 If you're just including with a `<script>`, `varname` is available as a global variable.
 
 
-### varname.camelback( str )
+### varname.camelback( string )
 
 Convert a variable name to camelBack format (capitalize the first letter of all but the first word).  
-**str:** *(string)* The string to convert.  
-**return:** *(string)* Returns the converted string.
+**string:** *(string)* The variable name to convert.  
+**return:** *(string)* Returns the converted variable name.
 
 ```js
 varname.camelback('foo_bar_baz'); // 'fooBarBaz'
 ```
 
 
-### varname.camelcase( str )
+### varname.camelcase( name )
 
 Convert a variable name to CamelCase format (capitalize the first letter of each word).  
-**str:** *(string)* The string to convert.  
-**return:** *(string)* Returns the converted string.
+**name:** *(string)* The variable name to convert.  
+**return:** *(string)* Returns the converted variable name.
 
 ```js
 varname.camelcase('foo_bar_baz'); // 'FooBarBaz'
 ```
 
 
-### varname.dash( str )
+### varname.dash( name )
 
 Convert a variable name to dash format.  
-**str:** *(string)* The string to convert.  
-**return:** *(string)* Returns the converted string.
+**name:** *(string)* The variable name to convert.  
+**return:** *(string)* Returns the converted variable name.
 
 ```js
 varname.dash('FooBarBaz'); // 'foo-bar-baz'
 ```
 
 
-### varname.underscore( str )
+### varname.underscore( name )
 
 Convert a variable name to underscore format.  
-**str:** *(string)* The string to convert.  
-**return:** *(string)* Returns the converted string.
+**name:** *(string)* The variable name to convert.  
+**return:** *(string)* Returns the converted variable name.
 
 ```js
 varname.underscore('FooBarBaz'); // 'foo_bar_baz'
 ```
 
 
-### varname.split( str )
+### varname.split( name )
 
 Split a string into separate variable parts. This allows you to write your own format converters easily.
-**str:** *(string)* The string to split.  
+**name:** *(string)* The variable name to split.  
 **return:** *(array)* Returns an array of parts.
 
 ```js
@@ -135,13 +132,11 @@ Copyright &copy; 2015, Rowan Manning
 [node]: http://nodejs.org/
 
 [info-coverage]: https://coveralls.io/github/rowanmanning/varname
-[info-dependencies]: https://gemnasium.com/rowanmanning/varname
 [info-license]: LICENSE
 [info-node]: package.json
 [info-npm]: https://www.npmjs.com/package/varname
 [info-build]: https://travis-ci.org/rowanmanning/varname
 [shield-coverage]: https://img.shields.io/coveralls/rowanmanning/varname.svg
-[shield-dependencies]: https://img.shields.io/gemnasium/rowanmanning/varname.svg
 [shield-license]: https://img.shields.io/badge/license-MIT-blue.svg
 [shield-node]: https://img.shields.io/badge/node.js%20support-0.10–4-brightgreen.svg
 [shield-npm]: https://img.shields.io/npm/v/varname.svg
