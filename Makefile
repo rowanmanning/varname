@@ -48,6 +48,6 @@ bundle:
 	@echo "/*! Varname $(VERSION) | $(HOMEPAGE) */" > build/varname.min.js
 	@./node_modules/.bin/browserify ./lib/varname --standalone varname >> build/varname.js
 	@./node_modules/.bin/browserify ./lib/varname --standalone varname | ./node_modules/.bin/uglifyjs >> build/varname.min.js
-	@./node_modules/.bin/browserify ./test/unit/lib/varname > build/test.js
+	@./node_modules/.bin/browserify ./test/unit/setup ./test/unit/lib/varname > build/test.js
 
 .PHONY: test

@@ -22,7 +22,7 @@ You can use Varname on the server side with [Node.js][node] and npm:
 npm install varname
 ```
 
-On the client side, you can include the built version of Varname in your page (found in [build/varname.js](build/varname.js):
+On the client side, you can include the built version of Varname in your page (found in [build/varname.js](build/varname.js)):
 
 ```html
 <script src="varname.js"></script>
