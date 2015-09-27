@@ -22,13 +22,7 @@ You can use Varname on the server side with [Node.js][node] and npm:
 npm install varname
 ```
 
-On the client side, you can either install Varname through [Component][component]:
-
-```sh
-component install rowanmanning/varname
-```
-
-or by including the built version of Varname in your page (found in [build/varname.js](build/varname.js):
+On the client side, you can include the built version of Varname in your page (found in [build/varname.js](build/varname.js):
 
 ```html
 <script src="varname.js"></script>
@@ -38,7 +32,7 @@ or by including the built version of Varname in your page (found in [build/varna
 Usage
 -----
 
-In Node.js or using Component, you can include Varname in your script by using require:
+In Node.js you can include Varname in your script by using require:
 
 ```js
 var varname = require('varname');
@@ -127,7 +121,6 @@ Copyright &copy; 2015, Rowan Manning
 
 
 
-[component]: https://github.com/component/component
 [make]: http://gnuwin32.sourceforge.net/packages/make.htm
 [node]: http://nodejs.org/
 
