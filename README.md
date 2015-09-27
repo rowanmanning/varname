@@ -4,9 +4,13 @@ Varname
 
 Convert strings between different variable naming formats.
 
-**Current Version:** *1.0.2*  
-**Build Status:** [![Build Status][travis-status]][travis]  
-**Node Support:** *0.6, 0.8, 0.10*  
+[![NPM version][shield-npm]][info-npm]
+[![Node.js version support][shield-node]][info-node]
+[![Build status][shield-build]][info-build]
+[![Code coverage][shield-coverage]][info-coverage]
+[![Dependencies][shield-dependencies]][info-dependencies]
+[![MIT licensed][shield-license]][info-license]
+
 **Browser Support:** *Android Browser 2.2–4.2, Firefox 3.6, Firefox 4–17, Google Chrome 14–25, Internet Explorer 6–10, Mobile Safari iOS 3–6, Opera 12.10, Safari 5–6*
 
 
@@ -16,13 +20,13 @@ Getting Started
 You can use Varname on the server side with [Node.js][node] and npm:
 
 ```sh
-$ npm install varname
+npm install varname
 ```
 
 On the client side, you can either install Varname through [Component][component]:
 
 ```sh
-$ component install rowanmanning/varname
+component install rowanmanning/varname
 ```
 
 or by simply including `varname.js` in your page:
@@ -106,39 +110,39 @@ varname.split('♥~foo|bar|baz~♥');
 ```
 
 
-Development
------------
+Contributing
+------------
 
-To develop Varname, you'll need to clone the repo and install dependencies with `make deps`. If you're on Windows, you'll also need to install [Make for Windows][make].
+To contribute to Varname, clone this repo locally and commit your code on a separate branch.
 
-Once you're set up, you can run the following commands:
-
-```sh
-$ make deps         # Install dependencies
-$ make lint         # Run JSHint with the correct config
-$ make test         # Run unit tests in Node
-$ make test-server  # Run a server for browser unit testing (visit localhost:3000)
-```
-
-When no build target is specified, make will run `deps lint test`. This means you can use the following command for brevity:
+If you're making core library changes please write unit tests for your code, and check that everything works by running the following before opening a pull-request:
 
 ```sh
-$ make
+make ci
 ```
-
-Code with lint errors or no/failing tests will not be accepted, please use the build tools outlined above.
 
 
 License
 -------
 
-Varname is licensed under the [MIT][mit] license.
+Varname is licensed under the [MIT][info-license] license.  
+Copyright &copy; 2015, Rowan Manning
 
 
 
 [component]: https://github.com/component/component
 [make]: http://gnuwin32.sourceforge.net/packages/make.htm
-[mit]: http://opensource.org/licenses/mit-license.php
 [node]: http://nodejs.org/
-[travis]: https://travis-ci.org/rowanmanning/varname
-[travis-status]: https://travis-ci.org/rowanmanning/varname.png?branch=master
+
+[info-coverage]: https://coveralls.io/github/rowanmanning/varname
+[info-dependencies]: https://gemnasium.com/rowanmanning/varname
+[info-license]: LICENSE
+[info-node]: package.json
+[info-npm]: https://www.npmjs.com/package/varname
+[info-build]: https://travis-ci.org/rowanmanning/varname
+[shield-coverage]: https://img.shields.io/coveralls/rowanmanning/varname.svg
+[shield-dependencies]: https://img.shields.io/gemnasium/rowanmanning/varname.svg
+[shield-license]: https://img.shields.io/badge/license-MIT-blue.svg
+[shield-node]: https://img.shields.io/badge/node.js%20support-0.10–4-brightgreen.svg
+[shield-npm]: https://img.shields.io/npm/v/varname.svg
+[shield-build]: https://img.shields.io/travis/rowanmanning/varname/master.svg

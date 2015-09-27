@@ -1,33 +1,42 @@
 
+# Color helpers
+C_CYAN=\x1b[34;01m
+C_RESET=\x1b[0m
+
 # Group targets
 all: deps lint test
 ci: lint test
 
 # Install dependencies
 deps:
-	@echo "Installing dependencies..."
+	@echo "$(C_CYAN)> installing dependencies$(C_RESET)"
 	@npm install
 
 # Lint JavaScript
-lint:
-	@echo "Linting JavaScript..."
-	@./node_modules/.bin/jshint \
-		--config ./test/config/jshint.json \
-		./{lib,test}/*
+lint: jshint jscs
+
+# Run JSHint
+jshint:
+	@echo "$(C_CYAN)> linting javascript$(C_RESET)"
+	@./node_modules/.bin/jshint .
+
+# Run JavaScript Code Style
+jscs:
+	@echo "$(C_CYAN)> checking javascript code style$(C_RESET)"
+	@./node_modules/.bin/jscs .
 
 # Run all tests
-test: test-unit
+test: test-coverage
 
 # Run unit tests
 test-unit:
-	@echo "Running unit tests..."
-	@./node_modules/.bin/mocha \
-		--reporter spec \
-		--colors \
-		--recursive \
-		./test/unit
+	@echo "$(C_CYAN)> running unit tests$(C_RESET)"
+	@./node_modules/.bin/mocha ./test/unit --reporter spec --colors --recursive
 
-# Run the Node Test app for browser testing
-test-server:
-	@echo "Running test server..."
-	@./node_modules/.bin/supervisor -q ./test/runner/boot.js
+# Run unit tests with coverage
+test-coverage:
+	@echo "$(C_CYAN)> running unit tests with coverage$(C_RESET)"
+	@./node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- ./test/unit --reporter spec --recursive
+	@./node_modules/.bin/istanbul check-coverage --statement 90 --branch 90 --function 90
+
+.PHONY: test
