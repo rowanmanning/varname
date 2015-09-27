@@ -39,10 +39,10 @@ var varname = require('varname');
 If you're just including with a `<script>`, `varname` is available as a global variable.
 
 
-### varname.camelback( string )
+### varname.camelback( name )
 
 Convert a variable name to camelBack format (capitalize the first letter of all but the first word).  
-**string:** *(string)* The variable name to convert.  
+**name:** *(string)* The variable name to convert.  
 **return:** *(string)* Returns the converted variable name.
 
 ```js
