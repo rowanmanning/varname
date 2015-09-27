@@ -10,8 +10,6 @@ Convert strings between different variable naming formats.
 [![Code coverage][shield-coverage]][info-coverage]
 [![MIT licensed][shield-license]][info-license]
 
-**Browser Support:** *Android Browser 2.2–4.2, Firefox 3.6, Firefox 4–17, Google Chrome 14–25, Internet Explorer 6–10, Mobile Safari iOS 3–6, Opera 12.10, Safari 5–6*
-
 
 Getting Started
 ---------------
@@ -99,6 +97,20 @@ varname.split('foo_bar_baz');
 varname.split('♥~foo|bar|baz~♥');
 // all return ['foo', 'bar', 'baz']
 ```
+
+
+Browser Support
+---------------
+
+Varname is officially supported in the following browsers:
+
+  - Android Browser 2.2+
+  - Edge 0.11+
+  - Firefox 4+
+  - Google Chrome 14+
+  - Internet Explorer 6+
+  - Safari 5+
+  - Safari iOS 4+
 
 
 Contributing
