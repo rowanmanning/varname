@@ -35,7 +35,8 @@ function underscore (name) {
 function split (name) {
     name = name
         .replace(/[^a-z0-9]+/gi, ' ')
-        .replace(/([A-Z]+)/g, ' $1')
+        .replace(/([A-Z0-9]+)([A-Z][a-z])/g, '$1 $2')
+        .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
         .toLowerCase();
     return trim(name).split(/\s+/);
 }
@@ -8211,6 +8212,7 @@ describe('lib/varname', function () {
             assert.deepEqual(varname.split('foo__bar--baz'), expected);
             assert.deepEqual(varname.split('foo.bar.baz'), expected);
             assert.deepEqual(varname.split('♥/foo|bar|baz/♥'), expected);
+            assert.deepEqual(varname.split('FOOBarBAZ'), expected);
         });
 
         it('should split names containing numbers correctly', function () {
