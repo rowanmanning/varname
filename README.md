@@ -144,6 +144,6 @@ Copyright &copy; 2015, Rowan Manning
 [info-build]: https://travis-ci.org/rowanmanning/varname
 [shield-coverage]: https://img.shields.io/coveralls/rowanmanning/varname.svg
 [shield-license]: https://img.shields.io/badge/license-MIT-blue.svg
-[shield-node]: https://img.shields.io/badge/node.js%20support-0.10–6-brightgreen.svg
+[shield-node]: https://img.shields.io/badge/node.js%20support-0.10–7-brightgreen.svg
 [shield-npm]: https://img.shields.io/npm/v/varname.svg
 [shield-build]: https://img.shields.io/travis/rowanmanning/varname/master.svg
