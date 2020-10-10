@@ -21,7 +21,7 @@
     "node": ">=0.10"
   },
   "devDependencies": {
-    "browserify": "^11",
+    "browserify": "^17",
     "istanbul": "~0.3",
     "jscs": "^2",
     "jshint": "^2",
