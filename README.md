@@ -1,42 +1,37 @@
 
-Varname
-=======
+# Varname
 
 Convert strings between different variable naming formats.
 
-[![NPM version][shield-npm]][info-npm]
-[![Node.js version support][shield-node]][info-node]
-[![Build status][shield-build]][info-build]
-[![Code coverage][shield-coverage]][info-coverage]
-[![MIT licensed][shield-license]][info-license]
+
+## Table of Contents
+
+  * [Requirements](#requirements)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [License](#license)
 
 
-Getting Started
----------------
+## Requirements
 
-You can use Varname on the server side with [Node.js][node] and npm:
+This library requires the following to run:
+
+  * [Node.js](https://nodejs.org/) 10+
+
+
+## Usage
+
+Install with [npm](https://www.npmjs.com/):
 
 ```sh
 npm install varname
 ```
 
-On the client side, you can include the built version of Varname in your page (found in [build/varname.js](build/varname.js)):
-
-```html
-<script src="varname.js"></script>
-```
-
-
-Usage
------
-
-In Node.js you can include Varname in your script by using require:
+Load the library into your code with a `require` call:
 
 ```js
-var varname = require('varname');
+const varname = require('varname');
 ```
-
-If you're just including with a `<script>`, `varname` is available as a global variable.
 
 
 ### varname.camelback( name )
@@ -100,50 +95,12 @@ varname.split('♥~foo|bar|baz~♥');
 ```
 
 
-Browser Support
----------------
+## Contributing
 
-Varname is officially supported in the following browsers:
-
-  - Android Browser 2.2+
-  - Edge 0.11+
-  - Firefox 4+
-  - Google Chrome 14+
-  - Internet Explorer 6+
-  - Safari 5+
-  - Safari iOS 4+
+[The contributing guide is available here](docs/contributing.md). All contributors must follow [this library's code of conduct](docs/code_of_conduct.md).
 
 
-Contributing
-------------
+## License
 
-To contribute to Varname, clone this repo locally and commit your code on a separate branch.
-
-If you're making core library changes please write unit tests for your code, and check that everything works by running the following before opening a pull-request:
-
-```sh
-make ci
-```
-
-
-License
--------
-
-Varname is licensed under the [MIT][info-license] license.  
+Licensed under the [MIT](LICENSE) license.<br/>
 Copyright &copy; 2015, Rowan Manning
-
-
-
-[make]: http://gnuwin32.sourceforge.net/packages/make.htm
-[node]: http://nodejs.org/
-
-[info-coverage]: https://coveralls.io/github/rowanmanning/varname
-[info-license]: LICENSE
-[info-node]: package.json
-[info-npm]: https://www.npmjs.com/package/varname
-[info-build]: https://travis-ci.org/rowanmanning/varname
-[shield-coverage]: https://img.shields.io/coveralls/rowanmanning/varname.svg
-[shield-license]: https://img.shields.io/badge/license-MIT-blue.svg
-[shield-node]: https://img.shields.io/badge/node.js%20support-0.10–7-brightgreen.svg
-[shield-npm]: https://img.shields.io/npm/v/varname.svg
-[shield-build]: https://img.shields.io/travis/rowanmanning/varname/master.svg

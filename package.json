@@ -1,6 +1,6 @@
 {
   "name": "varname",
-  "version": "2.0.3",
+  "version": "0.0.0",
   "description": "Convert strings between different variable naming formats",
   "keywords": [
     "camelcase",
@@ -9,7 +9,7 @@
     "string",
     "variable"
   ],
-  "author": "Rowan Manning (http://rowanmanning.co.uk/)",
+  "author": "Rowan Manning (https://rowanmanning.com/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/rowanmanning/varname.git"
@@ -18,21 +18,34 @@
   "bugs": "https://github.com/rowanmanning/varname/issues",
   "license": "MIT",
   "engines": {
-    "node": ">=0.10"
+    "node": ">=10",
+    "npm": ">=7"
+  },
+  "scripts": {
+    "verify": "eslint .",
+    "test:unit": "mocha 'test/unit/**/*.test.js'",
+    "test:coverage": "nyc npm run test:unit",
+    "test": "npm run test:coverage",
+    "project:verify": "npx --yes @rowanmanning/validate-project --type git node-library",
+    "project:fix": "npx --yes @rowanmanning/validate-project --type git node-library --fix"
   },
   "devDependencies": {
-    "browserify": "^11",
-    "istanbul": "~0.3",
-    "jscs": "^2",
-    "jshint": "^2",
-    "mocha": "^2",
-    "mockery": "~1.4",
-    "proclaim": "^3",
-    "sinon": "^1",
-    "uglify-js": "^2"
+    "@rowanmanning/eslint-config": "^3.3.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.10.0",
+    "mocha": "^9.2.1",
+    "nyc": "^15.1.0",
+    "testdouble": "^3.16.4"
   },
-  "main": "./lib/varname.js",
-  "scripts": {
-    "test": "make ci"
+  "main": "lib/varname.js",
+  "nyc": {
+    "eager": true,
+    "reporter": [
+      "html",
+      "text"
+    ]
+  },
+  "mocha": {
+    "timeout": 10000
   }
 }
