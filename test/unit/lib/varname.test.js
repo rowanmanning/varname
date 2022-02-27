@@ -147,6 +147,15 @@ describe('lib/varname', () => {
 			assert.deepEqual(varname.split('FOOBarBAZ'), expected);
 		});
 
+		it('splits numbers in names correctly', () => {
+			assert.deepEqual(varname.split('123'), ['123']);
+			assert.deepEqual(varname.split('123foo'), ['123foo']);
+			assert.deepEqual(varname.split('123foo-bar'), ['123foo', 'bar']);
+			assert.deepEqual(varname.split('foo123-456'), ['foo123', '456']);
+			assert.deepEqual(varname.split('foo123bar'), ['foo123bar']);
+			assert.deepEqual(varname.split('foo123Bar'), ['foo123', 'bar']);
+		});
+
 		it('splits names containing numbers correctly', () => {
 			assert.deepEqual(varname.split('foo12Bar34Baz56'), [
 				'foo12',
