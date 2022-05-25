@@ -1,5 +1,18 @@
 # Changelog
 
+### [4.0.1](https://github.com/rowanmanning/varname/compare/v4.0.0...v4.0.1) (2022-05-25)
+
+
+### Miscellaneous
+
+* bump @commitlint/cli from 16.2.4 to 17.0.0 ([5b3508f](https://github.com/rowanmanning/varname/commit/5b3508f6e9439a5b6464a0d867e9646023df6404))
+* bump @commitlint/cli from 17.0.0 to 17.0.1 ([37fa31f](https://github.com/rowanmanning/varname/commit/37fa31fe77c6de093a60dec7da4fbddb53c43b05))
+* bump @commitlint/config-conventional from 16.2.4 to 17.0.0 ([b890405](https://github.com/rowanmanning/varname/commit/b890405a5f15ebbb8b21818cea755191881dd4ae))
+* bump @rowanmanning/eslint-config from 3.4.0 to 3.5.0 ([81c6bd2](https://github.com/rowanmanning/varname/commit/81c6bd276608b973fe02f4a5de841a3f87be02e3))
+* bump eslint from 8.14.0 to 8.15.0 ([69bbbe7](https://github.com/rowanmanning/varname/commit/69bbbe71aab2a01ac2163ec8ba3f3422f6ea5c5b))
+* bump eslint from 8.15.0 to 8.16.0 ([e3bbf40](https://github.com/rowanmanning/varname/commit/e3bbf40339b0eedb2e72a347153627b784caf788))
+* bump husky from 7.0.4 to 8.0.1 ([dbd4c51](https://github.com/rowanmanning/varname/commit/dbd4c51ec7860c8ec4bb1341291a1dfb619390bd))
+
 ## [4.0.0](https://github.com/rowanmanning/varname/compare/v3.1.0...v4.0.0) (2022-05-02)
 
 
