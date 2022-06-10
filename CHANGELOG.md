@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.1.0](https://github.com/rowanmanning/varname/compare/v4.0.1...v4.1.0) (2022-06-10)
+
+
+### Features
+
+* ensure typescript types are always valid ([ecf4031](https://github.com/rowanmanning/varname/commit/ecf4031b21ac31f1a8f5d01cb23a7f0c7d08d185))
+
+
+### Miscellaneous
+
+* bump @commitlint/cli from 17.0.1 to 17.0.2 ([f53cc1b](https://github.com/rowanmanning/varname/commit/f53cc1b1a23acdb1cb47684a777e8b64b84d4568))
+* bump @commitlint/config-conventional from 17.0.0 to 17.0.2 ([ea0b843](https://github.com/rowanmanning/varname/commit/ea0b8438100a5aa837fbe61f79f159822520dd4f))
+* bump @rowanmanning/eslint-config from 3.5.0 to 4.0.2 ([eebcbf1](https://github.com/rowanmanning/varname/commit/eebcbf1f3b366891e9e001a67299297485ec40cd))
+* bump eslint from 8.16.0 to 8.17.0 ([8330208](https://github.com/rowanmanning/varname/commit/8330208c2cc96249d9c9b34675f76ca4a8c9a55a))
+* fix eslint issues ([9c10c74](https://github.com/rowanmanning/varname/commit/9c10c742f1d2f208ca0ab96409d04508f3c6cdc5))
+
 ### [4.0.1](https://github.com/rowanmanning/varname/compare/v4.0.0...v4.0.1) (2022-05-25)
 
 
