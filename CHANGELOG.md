@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.1](https://github.com/rowanmanning/varname/compare/v4.1.0...v4.1.1) (2022-07-09)
+
+
+### Bug Fixes
+
+* hide the misc changelog section ([8f5eaa2](https://github.com/rowanmanning/varname/commit/8f5eaa2e1df28c28f074a34208b876a53d02e640))
+
 ## [4.1.0](https://github.com/rowanmanning/varname/compare/v4.0.1...v4.1.0) (2022-06-10)
 
 
