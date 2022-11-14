@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.2](https://github.com/rowanmanning/varname/compare/v4.1.1...v4.1.2) (2022-11-14)
+
+
+### Bug Fixes
+
+* improve TypeScript compatibility ([041b22f](https://github.com/rowanmanning/varname/commit/041b22f11c5bbe293c4af07acb2be6b4a71cf351))
+
 ## [4.1.1](https://github.com/rowanmanning/varname/compare/v4.1.0...v4.1.1) (2022-07-09)
 
 
