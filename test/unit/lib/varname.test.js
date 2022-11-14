@@ -166,4 +166,10 @@ describe('lib/varname', () => {
 
 	});
 
+	describe('.default', () => {
+		it('aliases the module exports', () => {
+			assert.strictEqual(varname, varname.default);
+		});
+	});
+
 });
