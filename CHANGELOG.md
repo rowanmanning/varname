@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.3](https://github.com/rowanmanning/varname/compare/v4.1.2...v4.1.3) (2023-01-07)
+
+
+### Bug Fixes
+
+* bump json5 from 2.2.1 to 2.2.3 ([6c073f0](https://github.com/rowanmanning/varname/commit/6c073f029359bc88fb0fe83fe40a706842e47042))
+
 ## [4.1.2](https://github.com/rowanmanning/varname/compare/v4.1.1...v4.1.2) (2022-11-14)
 
 
