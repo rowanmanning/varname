@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.4](https://github.com/rowanmanning/varname/compare/v4.1.3...v4.1.4) (2023-02-14)
+
+
+### Bug Fixes
+
+* support npm v9 ([9788b7d](https://github.com/rowanmanning/varname/commit/9788b7d9b49cb352f389cb5c94ad0bb89e9b8366))
+
 ## [4.1.3](https://github.com/rowanmanning/varname/compare/v4.1.2...v4.1.3) (2023-01-07)
 
 
