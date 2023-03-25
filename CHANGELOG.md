@@ -1,5 +1,18 @@
 # Changelog
 
+## [5.0.0](https://github.com/rowanmanning/varname/compare/v4.1.4...v5.0.0) (2023-03-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop official support for npm v7
+* drop support for Node.js 14
+
+### Miscellaneous
+
+* drop official support for npm v7 ([ac9594a](https://github.com/rowanmanning/varname/commit/ac9594a92e524d8f67e78f21be8a4ea42396be78))
+* drop support for Node.js 14 ([0696b3a](https://github.com/rowanmanning/varname/commit/0696b3a84967ef44eaf0433601e6d074588c1bd7))
+
 ## [4.1.4](https://github.com/rowanmanning/varname/compare/v4.1.3...v4.1.4) (2023-02-14)
 
 
