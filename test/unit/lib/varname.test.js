@@ -1,6 +1,6 @@
 'use strict';
 
-const {assert} = require('chai');
+const assert = require('node:assert');
 const td = require('testdouble');
 
 describe('lib/varname', () => {
@@ -11,11 +11,11 @@ describe('lib/varname', () => {
 	});
 
 	it('is an object', () => {
-		assert.isObject(varname);
+		assert.strictEqual(typeof varname, 'object');
 	});
 
 	it('has a `camelback` method', () => {
-		assert.isFunction(varname.camelback);
+		assert.strictEqual(typeof varname.camelback, 'function');
 	});
 
 	describe('.camelback(name)', () => {
@@ -38,7 +38,7 @@ describe('lib/varname', () => {
 	});
 
 	it('has a `camelcase` method', () => {
-		assert.isFunction(varname.camelcase);
+		assert.strictEqual(typeof varname.camelcase, 'function');
 	});
 
 	describe('.camelcase(name)', () => {
@@ -61,7 +61,7 @@ describe('lib/varname', () => {
 	});
 
 	it('has a `dash` method', () => {
-		assert.isFunction(varname.dash);
+		assert.strictEqual(typeof varname.dash, 'function');
 	});
 
 	describe('.dash(name)', () => {
@@ -84,7 +84,7 @@ describe('lib/varname', () => {
 	});
 
 	it('has an `underscore` method', () => {
-		assert.isFunction(varname.underscore);
+		assert.strictEqual(typeof varname.underscore, 'function');
 	});
 
 	describe('.underscore(name)', () => {
@@ -107,7 +107,7 @@ describe('lib/varname', () => {
 	});
 
 	it('has a `split` method', () => {
-		assert.isFunction(varname.split);
+		assert.strictEqual(typeof varname.split, 'function');
 	});
 
 	describe('.split(name)', () => {
@@ -118,46 +118,46 @@ describe('lib/varname', () => {
 		];
 
 		it('returns an array', () => {
-			assert.isArray(varname.split('foo-bar-baz'));
+			assert.ok(Array.isArray(varname.split('foo-bar-baz')));
 		});
 
 		it('splits camelback style variable names', () => {
-			assert.deepEqual(varname.split('fooBarBaz'), expected);
+			assert.deepStrictEqual(varname.split('fooBarBaz'), expected);
 		});
 
 		it('splits camelcase style variable names', () => {
-			assert.deepEqual(varname.split('FooBarBaz'), expected);
+			assert.deepStrictEqual(varname.split('FooBarBaz'), expected);
 		});
 
 		it('splits dash style variable names', () => {
-			assert.deepEqual(varname.split('foo-bar-baz'), expected);
+			assert.deepStrictEqual(varname.split('foo-bar-baz'), expected);
 		});
 
 		it('splits underscore style variable names', () => {
-			assert.deepEqual(varname.split('foo_bar_baz'), expected);
+			assert.deepStrictEqual(varname.split('foo_bar_baz'), expected);
 		});
 
 		it('splits non-standard names correctly', () => {
-			assert.deepEqual(varname.split('/foo/bar/baz!'), expected);
-			assert.deepEqual(varname.split('FOO BAR BAZ'), expected);
-			assert.deepEqual(varname.split('foo_-_bar_-_baz'), expected);
-			assert.deepEqual(varname.split('foo__bar--baz'), expected);
-			assert.deepEqual(varname.split('foo.bar.baz'), expected);
-			assert.deepEqual(varname.split('♥/foo|bar|baz/♥'), expected);
-			assert.deepEqual(varname.split('FOOBarBAZ'), expected);
+			assert.deepStrictEqual(varname.split('/foo/bar/baz!'), expected);
+			assert.deepStrictEqual(varname.split('FOO BAR BAZ'), expected);
+			assert.deepStrictEqual(varname.split('foo_-_bar_-_baz'), expected);
+			assert.deepStrictEqual(varname.split('foo__bar--baz'), expected);
+			assert.deepStrictEqual(varname.split('foo.bar.baz'), expected);
+			assert.deepStrictEqual(varname.split('♥/foo|bar|baz/♥'), expected);
+			assert.deepStrictEqual(varname.split('FOOBarBAZ'), expected);
 		});
 
 		it('splits numbers in names correctly', () => {
-			assert.deepEqual(varname.split('123'), ['123']);
-			assert.deepEqual(varname.split('123foo'), ['123foo']);
-			assert.deepEqual(varname.split('123foo-bar'), ['123foo', 'bar']);
-			assert.deepEqual(varname.split('foo123-456'), ['foo123', '456']);
-			assert.deepEqual(varname.split('foo123bar'), ['foo123bar']);
-			assert.deepEqual(varname.split('foo123Bar'), ['foo123', 'bar']);
+			assert.deepStrictEqual(varname.split('123'), ['123']);
+			assert.deepStrictEqual(varname.split('123foo'), ['123foo']);
+			assert.deepStrictEqual(varname.split('123foo-bar'), ['123foo', 'bar']);
+			assert.deepStrictEqual(varname.split('foo123-456'), ['foo123', '456']);
+			assert.deepStrictEqual(varname.split('foo123bar'), ['foo123bar']);
+			assert.deepStrictEqual(varname.split('foo123Bar'), ['foo123', 'bar']);
 		});
 
 		it('splits names containing numbers correctly', () => {
-			assert.deepEqual(varname.split('foo12Bar34Baz56'), [
+			assert.deepStrictEqual(varname.split('foo12Bar34Baz56'), [
 				'foo12',
 				'bar34',
 				'baz56'
