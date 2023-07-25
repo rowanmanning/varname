@@ -1,5 +1,42 @@
 # Changelog
 
+## 5.0.2 (2023-07-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop official support for npm v7
+* drop support for Node.js 14
+* drop support for Node.js versions below 14
+* mocha no longer supports Node.js v12
+
+### Features
+
+* ensure typescript types are always valid ([ecf4031](https://github.com/rowanmanning/varname/commit/ecf4031b21ac31f1a8f5d01cb23a7f0c7d08d185))
+
+
+### Bug Fixes
+
+* add support for Node.js 20 ([c862c72](https://github.com/rowanmanning/varname/commit/c862c72938e1ea3e612734be9dd3e36fed5b12ac))
+* bump json5 from 2.2.1 to 2.2.3 ([6c073f0](https://github.com/rowanmanning/varname/commit/6c073f029359bc88fb0fe83fe40a706842e47042))
+* hide the misc changelog section ([8f5eaa2](https://github.com/rowanmanning/varname/commit/8f5eaa2e1df28c28f074a34208b876a53d02e640))
+* improve TypeScript compatibility ([041b22f](https://github.com/rowanmanning/varname/commit/041b22f11c5bbe293c4af07acb2be6b4a71cf351))
+* sort out broken releases ([1ebe01b](https://github.com/rowanmanning/varname/commit/1ebe01bc319f38fb9367d8ead6273169b9aa61aa))
+* support npm v9 ([9788b7d](https://github.com/rowanmanning/varname/commit/9788b7d9b49cb352f389cb5c94ad0bb89e9b8366))
+
+
+### Documentation Changes
+
+* manually define changelog sections ([1fbdd55](https://github.com/rowanmanning/varname/commit/1fbdd554fb6b26523e90ec0cc38092e01838e281))
+
+
+### Miscellaneous
+
+* bump mocha from 9.2.2 to 10.0.0 ([e002adb](https://github.com/rowanmanning/varname/commit/e002adb8333798bfabbf880157ce16194c457192))
+* drop official support for npm v7 ([ac9594a](https://github.com/rowanmanning/varname/commit/ac9594a92e524d8f67e78f21be8a4ea42396be78))
+* drop support for Node.js 14 ([0696b3a](https://github.com/rowanmanning/varname/commit/0696b3a84967ef44eaf0433601e6d074588c1bd7))
+* drop support for Node.js versions below 14 ([897d2ab](https://github.com/rowanmanning/varname/commit/897d2ab6ad65939d7fa6316cef58027198330709))
+
 ## [5.0.1](https://github.com/rowanmanning/varname/compare/v5.0.0...v5.0.1) (2023-04-18)
 
 
