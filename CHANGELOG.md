@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.0](https://github.com/rowanmanning/varname/compare/v6.0.0...v6.1.0) (2024-01-29)
+
+
+### Features
+
+* add official support for npm 10 ([5d46792](https://github.com/rowanmanning/varname/commit/5d4679227084e3bda7408b429bc01f48c93a9477))
+
 ## [6.0.0](https://github.com/rowanmanning/varname/compare/v5.0.2...v6.0.0) (2023-09-11)
 
 
