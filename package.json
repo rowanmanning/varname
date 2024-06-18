@@ -22,10 +22,10 @@
     "npm": "8.x || 9.x || 10.x"
   },
   "scripts": {
+    "verify": "npm run verify:biome && npm run verify:types",
+    "verify:biome": "biome check",
     "build": "npm run build:types",
     "build:types": "tsc --noEmit false --emitDeclarationOnly --project ./jsconfig.json",
-    "verify": "npm run verify:eslint && npm run verify:types",
-    "verify:eslint": "eslint .",
     "verify:types": "tsc --noEmit --project ./jsconfig.json",
     "test:unit": "mocha 'test/unit/**/*.test.js'",
     "test:coverage": "nyc npm run test:unit",
@@ -37,8 +37,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.2",
     "@commitlint/config-conventional": "^18.4.2",
-    "@rowanmanning/eslint-config": "^8.0.0",
-    "eslint": "^8.10.0",
+    "@rowanmanning/biome-config": "^1.2.0",
     "husky": "^9.0.7",
     "mocha": "^10.0.0",
     "nyc": "^15.1.0",
