@@ -28,13 +28,12 @@ describe('lib/varname', () => {
 		});
 
 		it('calls `varname.split` with the input name', () => {
-			td.verify(varname.split('foo-bar-baz'), {times: 1});
+			td.verify(varname.split('foo-bar-baz'), { times: 1 });
 		});
 
 		it('joins and returns the result of the split in camelback style', () => {
 			assert.strictEqual(result, 'fooBarBaz');
 		});
-
 	});
 
 	it('has a `camelcase` method', () => {
@@ -51,13 +50,12 @@ describe('lib/varname', () => {
 		});
 
 		it('calls `varname.split` with the input name', () => {
-			td.verify(varname.split('foo-bar-baz'), {times: 1});
+			td.verify(varname.split('foo-bar-baz'), { times: 1 });
 		});
 
 		it('joins and returns the result of the split in camelcase style', () => {
 			assert.strictEqual(result, 'FooBarBaz');
 		});
-
 	});
 
 	it('has a `dash` method', () => {
@@ -74,13 +72,12 @@ describe('lib/varname', () => {
 		});
 
 		it('calls `varname.split` with the input name', () => {
-			td.verify(varname.split('foo-bar-baz'), {times: 1});
+			td.verify(varname.split('foo-bar-baz'), { times: 1 });
 		});
 
 		it('joins and returns the result of the split in dashed style', () => {
 			assert.strictEqual(result, 'foo-bar-baz');
 		});
-
 	});
 
 	it('has an `underscore` method', () => {
@@ -97,13 +94,12 @@ describe('lib/varname', () => {
 		});
 
 		it('calls `varname.split` with the input name', () => {
-			td.verify(varname.split('foo-bar-baz'), {times: 1});
+			td.verify(varname.split('foo-bar-baz'), { times: 1 });
 		});
 
 		it('joins and returns the result of the split in underscored style', () => {
 			assert.strictEqual(result, 'foo_bar_baz');
 		});
-
 	});
 
 	it('has a `split` method', () => {
@@ -111,11 +107,7 @@ describe('lib/varname', () => {
 	});
 
 	describe('.split(name)', () => {
-		const expected = [
-			'foo',
-			'bar',
-			'baz'
-		];
+		const expected = ['foo', 'bar', 'baz'];
 
 		it('returns an array', () => {
 			assert.ok(Array.isArray(varname.split('foo-bar-baz')));
@@ -157,13 +149,8 @@ describe('lib/varname', () => {
 		});
 
 		it('splits names containing numbers correctly', () => {
-			assert.deepStrictEqual(varname.split('foo12Bar34Baz56'), [
-				'foo12',
-				'bar34',
-				'baz56'
-			]);
+			assert.deepStrictEqual(varname.split('foo12Bar34Baz56'), ['foo12', 'bar34', 'baz56']);
 		});
-
 	});
 
 	describe('.default', () => {
@@ -171,5 +158,4 @@ describe('lib/varname', () => {
 			assert.strictEqual(varname, varname.default);
 		});
 	});
-
 });
