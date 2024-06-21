@@ -30,8 +30,6 @@
     "test:unit": "mocha 'test/unit/**/*.test.js'",
     "test:coverage": "nyc npm run test:unit",
     "test": "npm run test:coverage",
-    "project:verify": "npx --yes @rowanmanning/validate-project@3 --type git node-library",
-    "project:fix": "npx --yes @rowanmanning/validate-project@3 --type git node-library --fix",
     "prepare": "husky"
   },
   "devDependencies": {
