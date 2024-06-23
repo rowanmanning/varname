@@ -26,7 +26,7 @@
     "build": "npm run build:types",
     "build:types": "tsc --noEmit false --emitDeclarationOnly --project ./jsconfig.json",
     "verify:types": "tsc --noEmit --project ./jsconfig.json",
-    "test:unit": "mocha 'test/unit/**/*.test.js'",
+    "test:unit": "node --test test/unit",
     "test:coverage": "nyc npm run test:unit",
     "test": "npm run test:coverage",
     "prepare": "husky"
@@ -36,7 +36,6 @@
     "@commitlint/config-conventional": "^18.4.2",
     "@rowanmanning/biome-config": "^1.2.0",
     "husky": "^9.0.7",
-    "mocha": "^10.0.0",
     "nyc": "^15.1.0",
     "testdouble": "^3.16.4",
     "typescript": "^5.0.2"
@@ -48,8 +47,5 @@
       "html",
       "text"
     ]
-  },
-  "mocha": {
-    "timeout": 10000
   }
 }

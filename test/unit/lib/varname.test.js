@@ -1,7 +1,10 @@
 'use strict';
 
+const { afterEach, beforeEach, describe, it } = require('node:test');
 const assert = require('node:assert');
 const td = require('testdouble');
+
+td.config({ ignoreWarnings: true });
 
 describe('lib/varname', () => {
 	let varname;
@@ -9,6 +12,8 @@ describe('lib/varname', () => {
 	beforeEach(() => {
 		varname = require('../../../lib/varname');
 	});
+
+	afterEach(() => td.reset());
 
 	it('is an object', () => {
 		assert.strictEqual(typeof varname, 'object');
