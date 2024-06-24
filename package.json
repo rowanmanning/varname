@@ -37,7 +37,6 @@
     "@rowanmanning/biome-config": "^1.2.0",
     "husky": "^9.0.7",
     "nyc": "^15.1.0",
-    "testdouble": "^3.16.4",
     "typescript": "^5.0.2"
   },
   "main": "lib/varname.js",

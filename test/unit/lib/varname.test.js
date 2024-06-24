@@ -1,10 +1,7 @@
 'use strict';
 
-const { afterEach, beforeEach, describe, it } = require('node:test');
+const { afterEach, beforeEach, describe, it, mock } = require('node:test');
 const assert = require('node:assert');
-const td = require('testdouble');
-
-td.config({ ignoreWarnings: true });
 
 describe('lib/varname', () => {
 	let varname;
@@ -13,7 +10,7 @@ describe('lib/varname', () => {
 		varname = require('../../../lib/varname');
 	});
 
-	afterEach(() => td.reset());
+	afterEach(() => mock.reset());
 
 	it('is an object', () => {
 		assert.strictEqual(typeof varname, 'object');
@@ -27,13 +24,13 @@ describe('lib/varname', () => {
 		let result;
 
 		beforeEach(() => {
-			td.replace(varname, 'split');
-			td.when(varname.split('foo-bar-baz')).thenReturn(['foo', 'bar', 'baz']);
+			mock.method(varname, 'split', () => ['foo', 'bar', 'baz']);
 			result = varname.camelback('foo-bar-baz');
 		});
 
 		it('calls `varname.split` with the input name', () => {
-			td.verify(varname.split('foo-bar-baz'), { times: 1 });
+			assert.strictEqual(varname.split.mock.calls.length, 1);
+			assert.deepEqual(varname.split.mock.calls[0].arguments, ['foo-bar-baz']);
 		});
 
 		it('joins and returns the result of the split in camelback style', () => {
@@ -49,13 +46,13 @@ describe('lib/varname', () => {
 		let result;
 
 		beforeEach(() => {
-			td.replace(varname, 'split');
-			td.when(varname.split('foo-bar-baz')).thenReturn(['foo', 'bar', 'baz']);
+			mock.method(varname, 'split', () => ['foo', 'bar', 'baz']);
 			result = varname.camelcase('foo-bar-baz');
 		});
 
 		it('calls `varname.split` with the input name', () => {
-			td.verify(varname.split('foo-bar-baz'), { times: 1 });
+			assert.strictEqual(varname.split.mock.calls.length, 1);
+			assert.deepEqual(varname.split.mock.calls[0].arguments, ['foo-bar-baz']);
 		});
 
 		it('joins and returns the result of the split in camelcase style', () => {
@@ -71,13 +68,13 @@ describe('lib/varname', () => {
 		let result;
 
 		beforeEach(() => {
-			td.replace(varname, 'split');
-			td.when(varname.split('foo-bar-baz')).thenReturn(['foo', 'bar', 'baz']);
+			mock.method(varname, 'split', () => ['foo', 'bar', 'baz']);
 			result = varname.dash('foo-bar-baz');
 		});
 
 		it('calls `varname.split` with the input name', () => {
-			td.verify(varname.split('foo-bar-baz'), { times: 1 });
+			assert.strictEqual(varname.split.mock.calls.length, 1);
+			assert.deepEqual(varname.split.mock.calls[0].arguments, ['foo-bar-baz']);
 		});
 
 		it('joins and returns the result of the split in dashed style', () => {
@@ -93,13 +90,13 @@ describe('lib/varname', () => {
 		let result;
 
 		beforeEach(() => {
-			td.replace(varname, 'split');
-			td.when(varname.split('foo-bar-baz')).thenReturn(['foo', 'bar', 'baz']);
+			mock.method(varname, 'split', () => ['foo', 'bar', 'baz']);
 			result = varname.underscore('foo-bar-baz');
 		});
 
 		it('calls `varname.split` with the input name', () => {
-			td.verify(varname.split('foo-bar-baz'), { times: 1 });
+			assert.strictEqual(varname.split.mock.calls.length, 1);
+			assert.deepEqual(varname.split.mock.calls[0].arguments, ['foo-bar-baz']);
 		});
 
 		it('joins and returns the result of the split in underscored style', () => {
