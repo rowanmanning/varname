@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.2.1](https://github.com/rowanmanning/varname/compare/v6.2.0...v6.2.1) (2024-07-27)
+
+
+### Bug Fixes
+
+* prevent husky from failing ([7e4867a](https://github.com/rowanmanning/varname/commit/7e4867aac1d45ee12f86af551d77b5c9c12dddec))
+
 ## [6.2.0](https://github.com/rowanmanning/varname/compare/v6.1.0...v6.2.0) (2024-06-23)
 
 
