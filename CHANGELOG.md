@@ -1,5 +1,16 @@
 # Changelog
 
+## [7.0.0](https://github.com/rowanmanning/varname/compare/v6.2.1...v7.0.0) (2025-03-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop Node.js 18
+
+### Miscellaneous Chores
+
+* drop Node.js 18 ([25da424](https://github.com/rowanmanning/varname/commit/25da424bbe8a4c7ed1561efb4cfd85d2c1ec1f87))
+
 ## [6.2.1](https://github.com/rowanmanning/varname/compare/v6.2.0...v6.2.1) (2024-07-27)
 
 
