@@ -18,7 +18,7 @@
   "bugs": "https://github.com/rowanmanning/varname/issues",
   "license": "MIT",
   "engines": {
-    "node": "18.x || 20.x || 22.x"
+    "node": "20.x || 22.x"
   },
   "scripts": {
     "verify": "npm run verify:biome && npm run verify:types",
