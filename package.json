@@ -39,7 +39,12 @@
     "nyc": "^17.0.0",
     "typescript": "^5.5.2"
   },
-  "main": "lib/varname.js",
+  "exports": {
+    ".": {
+      "types": "./lib/varname.d.ts",
+      "default": "./lib/varname.js"
+    }
+  },
   "nyc": {
     "eager": true,
     "reporter": [
