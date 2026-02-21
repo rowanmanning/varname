@@ -26,9 +26,8 @@
     "build": "npm run build:types",
     "build:types": "tsc --noEmit false --emitDeclarationOnly --project ./jsconfig.json",
     "verify:types": "tsc --noEmit --project ./jsconfig.json",
-    "test:unit": "cd test/unit && node --test",
-    "test:coverage": "nyc npm run test:unit",
-    "test": "npm run test:coverage",
+    "test": "npm run test:unit",
+    "test:unit": "node --test --experimental-test-coverage --test-coverage-branches=100 --test-coverage-functions=100 --test-coverage-lines=100 test/unit/**/*.test.js",
     "prepare": "husky || true"
   },
   "devDependencies": {
@@ -36,7 +35,6 @@
     "@commitlint/config-conventional": "^20.4.2",
     "@rowanmanning/biome-config": "^3.0.1",
     "husky": "^9.0.7",
-    "nyc": "^17.0.0",
     "typescript": "^5.5.2"
   },
   "exports": {
@@ -44,12 +42,5 @@
       "types": "./lib/varname.d.ts",
       "default": "./lib/varname.js"
     }
-  },
-  "nyc": {
-    "eager": true,
-    "reporter": [
-      "html",
-      "text"
-    ]
   }
 }
