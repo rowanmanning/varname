@@ -18,7 +18,7 @@
   "bugs": "https://github.com/rowanmanning/varname/issues",
   "license": "MIT",
   "engines": {
-    "node": "20.x || 22.x || 24.x"
+    "node": "22.x || 24.x"
   },
   "scripts": {
     "verify": "npm run verify:biome && npm run verify:types",
@@ -26,9 +26,8 @@
     "build": "npm run build:types",
     "build:types": "tsc --noEmit false --emitDeclarationOnly --project ./jsconfig.json",
     "verify:types": "tsc --noEmit --project ./jsconfig.json",
-    "test:unit": "cd test/unit && node --test",
-    "test:coverage": "nyc npm run test:unit",
-    "test": "npm run test:coverage",
+    "test": "npm run test:unit",
+    "test:unit": "node --test --experimental-test-coverage --test-coverage-branches=100 --test-coverage-functions=100 --test-coverage-lines=100 test/unit/**/*.test.js",
     "prepare": "husky || true"
   },
   "devDependencies": {
@@ -36,15 +35,12 @@
     "@commitlint/config-conventional": "^20.4.2",
     "@rowanmanning/biome-config": "^3.0.1",
     "husky": "^9.0.7",
-    "nyc": "^17.0.0",
     "typescript": "^5.5.2"
   },
-  "main": "lib/varname.js",
-  "nyc": {
-    "eager": true,
-    "reporter": [
-      "html",
-      "text"
-    ]
+  "exports": {
+    ".": {
+      "types": "./lib/varname.d.ts",
+      "default": "./lib/varname.js"
+    }
   }
 }
