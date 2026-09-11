@@ -1,6 +1,7 @@
 {
   "name": "varname",
   "version": "7.1.0",
+  "type": "module",
   "description": "Convert strings between different variable naming formats",
   "keywords": [
     "camelcase",
