@@ -68,22 +68,20 @@ feat!: add a breaking feature
 
 We use [commitlint](https://commitlint.js.org/) to enforce these commit messages.
 
-### Linting
+### Building
+
+This project is written in [TypeScript](https://www.typescriptlang.org/) and built before publishing:
+
+```sh
+npm run build
+```
+
+### Verifying
 
 This project is linted using [Biome](https://biomejs.dev/). Please keep to the existing style. Biome errors will fail the build on any PRs:
 
-```
-npm run verify:biome
-```
-
-### TypeScript
-
-Although this project is written in JavaScript, it is checked with [TypeScript](https://www.typescriptlang.org/) to ensure type-safety. We also document all types with JSDoc so you should get type hints if your editor supports these.
-
-Type errors will fail the build on any PRs. Most editors have a TypeScript plugin which will pick up errors, but you can also check types manually with the following command:
-
-```
-npm run verify:types
+```sh
+npm run verify
 ```
 
 ### Unit tests
@@ -92,6 +90,6 @@ This project has unit tests with good coverage, and failing unit tests will fail
 
 You can run tests manually with the following command:
 
-```
+```sh
 npm run test:unit
 ```

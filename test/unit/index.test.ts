@@ -1,8 +1,8 @@
 import assert from 'node:assert';
 import { describe, it } from 'node:test';
-import { camelback, camelcase, dash, split, underscore } from '../../../lib/varname.js';
+import { camelback, camelcase, dash, split, underscore } from '../../index.ts';
 
-describe('lib/varname', () => {
+describe('varname', () => {
 	describe('.camelback(name)', () => {
 		it('returns the name in camelback style', () => {
 			const result = camelback('foo-bar-baz');
