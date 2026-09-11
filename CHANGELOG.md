@@ -1,5 +1,27 @@
 # Changelog
 
+## [8.0.0](https://github.com/rowanmanning/varname/compare/v7.1.0...v8.0.0) (2026-09-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* switch to ESM
+* drop Node.js 20
+
+### Bug Fixes
+
+* resolve a potential ReDoS ([e806ff3](https://github.com/rowanmanning/varname/commit/e806ff3a7eeab4fd878a5d28a0600bf4e154bf03))
+
+
+### Miscellaneous Chores
+
+* drop Node.js 20 ([f7f2440](https://github.com/rowanmanning/varname/commit/f7f2440c88e18507d3a7e933c4a16ea07838b3fd))
+
+
+### Code Refactoring
+
+* switch to ESM ([c91cfd5](https://github.com/rowanmanning/varname/commit/c91cfd5541115ebeb3b194d061b62b18441d1ac4))
+
 ## [7.1.0](https://github.com/rowanmanning/varname/compare/v7.0.0...v7.1.0) (2025-05-21)
 
 
