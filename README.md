@@ -27,10 +27,12 @@ Install with [npm](https://www.npmjs.com/):
 npm install varname
 ```
 
-Load the library into your code with a `require` call:
+Import the library into your code:
 
 ```js
-const varname = require('varname');
+import * as varname from 'varname';
+// or
+import { camelback, camelcase, dash, split, underscore } from 'varname';
 ```
 
 
