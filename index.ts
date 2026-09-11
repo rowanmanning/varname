@@ -36,8 +36,8 @@ export function underscore(name: string) {
 export function split(name: string) {
 	return name
 		.replace(/[^a-z0-9]+/gi, ' ')
-		.replace(/([A-Z0-9]+)([A-Z][a-z])/g, '$1 $2')
-		.replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+		.replace(/(?<=[A-Z0-9])(?=[A-Z][a-z])/g, ' ')
+		.replace(/(?<=[a-z0-9])(?=[A-Z])/g, ' ')
 		.toLowerCase()
 		.trim()
 		.split(whitespaceSequence);
